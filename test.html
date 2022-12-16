@@ -1,0 +1,1019 @@
+<!--  
+Edit form: https://docs.google.com/forms/d/e/1FAIpQLSedk11G04TJ2Bs4mUM2MccDikEsV6Aa1ZEk3GRSNNBJQ3UKbA/viewform?usp=sharing
+View form: https://docs.google.com/forms/d/e/1FAIpQLSedk11G04TJ2Bs4mUM2MccDikEsV6Aa1ZEk3GRSNNBJQ3UKbA/viewform?usp=sf_link
+
+Goals: keep everything copy-pastable and optimally in one file
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/61f231ab03e011211be9b7f7/6c8827c8-cece-4dab-88a0-9bdc8ebf3600/favicon.ico?format=100w">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cascade Assessment</title>
+    <style>
+      @font-face{font-family:minerva-modern;src:url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
+      
+      html, body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0; padding: 0;
+        background-color: gainsboro;
+        font-family: brandon-grotesque;
+      }
+      
+      .center {
+        max-width: 1000px;
+        height: 100vh;
+        position: absolute;
+        left: 0; right: 0;
+        top: 0;
+        margin: auto;
+        background-color: white;
+      }
+      
+      #navbar {
+        position: absolute;
+        top: 0; left: 0;
+        width: calc(100% - 32px);
+        margin: 16px;
+        border-bottom: 1px solid black;
+        display: flex;
+/*         flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        background: white;
+      }
+
+      #icon {
+        max-width: max(20%, 132px);
+        flex: 1 1 auto;
+      }
+      
+      #questions {
+        flex: 8 1 auto;
+        text-align: center;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      
+      #questions > div {
+        margin: auto;
+        border-radius: 50%;
+        max-width: 64px;
+        width: 10%;
+        min-width: 32px;
+        display: inline-block;
+        position: relative;
+        background-color: hsla(188.019801980198, 94.39252336448597%, 41.96078431372549%, 0.5);
+        color: white;
+        font-size: min(2rem, 160%);
+        margin: 2px;
+      }
+      
+      #questions > div:before{content:"";display:block;margin-top:100%;}
+      
+      #questions > div > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; 
+        top: 0; left: 0; right: 0; bottom: 0;
+      }
+      
+      #menu {
+        flex: 0;
+        margin: 4px;
+        width: 100%;
+        color: rgb(234, 109, 48);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 3em;
+      }
+      
+      .nav {
+        margin: 16px;
+        min-width: 20%;
+        font-size: 2rem;
+        background-color: hsla(188.019801980198, 94.39252336448597%, 41.96078431372549%, 1);
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      
+      #submit {
+        position: absolute;
+        bottom: 0; right: 0;
+      }
+      
+      #next {
+        position: absolute;
+        bottom: 0; right: 0;
+      }
+      
+      #back {
+        position: absolute;
+        bottom: 0; left: 0;
+      }
+      
+      form {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+      
+      .question {
+        position: absolute;
+        margin: auto;
+        top: 30px; bottom: 0;
+        left: 0; right: 0;
+        height: fit-content;
+        width: fit-content;
+        max-width: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-size: min(min(2em, 12vw), 3vh);
+        padding: 12px;
+        overflow-y: auto;
+        max-height: calc(100% - 67px);
+      }
+      
+      .question > img {
+        width: auto;
+        max-height: 20vh;
+      }
+      
+      .inputGroup > * {
+        box-sizing: border-box;
+      }
+      
+      .inputGroup {
+         background-color: #ffffff;
+         display: block;
+         margin: 10px 0;
+         position: relative;
+         border-radius: 8px;
+         overflow: hidden;
+      }
+      .inputGroup input {
+         width: 32px;
+         height: 32px;
+         order: 1;
+         z-index: 2;
+         position: absolute;
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+         cursor: pointer;
+         opacity: 0;
+      }
+      .inputGroup label {
+         padding: 12px 30px;
+         width: 100%;
+         display: block;
+         text-align: left;
+         color: #3c454c;
+         cursor: pointer;
+         position: relative;
+         z-index: 2;
+         transition: color 200ms ease-in;
+         overflow: hidden;
+      }
+      .inputGroup label:before {
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         content: '';
+         background-color: hsla(188.019801980198, 94.39252336448597%, 41.96078431372549%, 1);
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%) scale3d(1, 1, 1);
+         transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+         opacity: 0;
+         z-index: -1;
+      }
+      .inputGroup label:after {
+         width: 32px;
+         height: 32px;
+         content: '';
+         border: 2px solid #d1d7dc;
+         background-color: #ffffff;
+         background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+         background-repeat: no-repeat;
+         background-position: 4px 5px;
+         border-radius: 50%;
+         z-index: 2;
+         position: absolute;
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+         cursor: pointer;
+         transition: all 200ms ease-in;
+      }
+       .inputGroup input:checked ~ label {
+         color: #ffffff;
+      }
+       .inputGroup input:checked ~ label:before {
+         transform: translate(-50%, -50%) scale3d(560, 560, 1);
+         opacity: 1;
+      }
+       .inputGroup input:checked ~ label:after {
+         background-color: rgb(234, 109, 48);
+         border-color: rgb(234, 109, 48);
+      }
+      
+      .form__group {
+         position: relative;
+         padding: 15px 0 0;
+         margin-top: 2px;
+         margin-bottom: 10px;
+         width: 80%;
+         display: inline-block;
+      }
+
+      .form__group input:-webkit-autofill,
+      .form__group input:-webkit-autofill:hover, 
+      .form__group input:-webkit-autofill:focus, 
+      .form__group input:-webkit-autofill:active{
+          -webkit-box-shadow: 0 0 0 30px white inset !important;
+          -webkit-text-fill-color: black;
+      }
+       .form__label {
+         position: absolute;
+         top: 0;
+         display: block;
+         transition: 0.2s;
+         font-size: 1rem;
+         color: black;
+      }
+       .form__field {
+         font-family: inherit;
+         width: 100%;
+         border: 0;
+         border-bottom: 2px solid black;
+         outline: 0;
+         font-size: 1.3rem;
+         color: black;
+         padding: 7px 0;
+         background: transparent;
+         transition: border-color 0.2s;
+      }
+       .form__field::placeholder {
+         color: transparent;
+      }
+       .form__field:placeholder-shown ~ .form__label {
+         font-size: 1.3rem;
+         cursor: text;
+         top: 20px;
+      }
+       .form__field:required, .form__field:invalid {
+         box-shadow: none;
+      }
+       .form__field:focus {
+         padding-bottom: 6px;
+         font-weight: 700;
+         letter-spacing: 0.03em;
+         border-width: 3px;
+         border-image-slice: 1;
+      }
+       .form__field:focus ~ .form__label {
+         position: absolute;
+         top: 0;
+         display: block;
+         transition: 0.2s;
+         font-size: 1rem;
+         color: black;
+         font-weight: 700;
+      }
+      
+      .form__short {
+         position: relative;
+         text-align: center;
+      }
+      .form__blank {
+         font-family: inherit;
+         width: 8vw;
+         max-width: 2em;
+         border: 0;
+         border-bottom: 2px solid black;
+         outline: 0;
+         font-size: min(min(2em, 12vw), 3vh);
+         color: black;
+         background: transparent;
+         transition: border-color 0.2s;
+         text-align: center;
+         margin: 8px 0;
+      }
+       .form__blank::placeholder {
+         color: transparent;
+      }
+       .form__blank:placeholder-shown ~ .form__label {
+         font-size: min(min(2em, 12vw), 3vh);
+         cursor: text;
+         top: 20px;
+      }
+       .form__blank:required, .form__blank:invalid {
+         box-shadow: none;
+      }
+       .form__blank:focus {
+         padding-bottom: 6px;
+         font-weight: 700;
+         letter-spacing: 0.03em;
+         border-width: 3px;
+         border-image-slice: 1;
+      }
+       .form__blank:focus ~ .form__label {
+         position: absolute;
+         top: 0;
+         display: block;
+         transition: 0.2s;
+         font-size: 1.3rem;
+         color: black;
+         font-weight: 700;
+      }
+      
+      .input__drag {
+        padding-left: 30px; 
+        border-color: black; 
+        border-radius: 30px; 
+        font-family: inherit; 
+        font-size: inherit; 
+        color: black; 
+        height: 20%; 
+        width: 30%;
+      }
+      
+      .horizontal-mcq {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 6%;
+      }
+      
+      .horizontal-option {
+        flex-grow: 1;
+        position: relative;
+        max-width: 10vh;
+      }
+      
+      .horizontal-option > img {
+        width: 100%;
+      }
+      
+      .horizontal-option > input {
+        opacity: 0;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        width: 100%; height: 100%;
+      }
+      
+      .horizontal-option > input:checked {
+        opacity: 1;
+        width: 0; height: 0;
+      }
+      
+      .horizontal-option > input:checked:before {
+        content: "";
+        position: absolute;
+        width: 15vh;
+        height: 15vh;
+        left: -8vh; top: -8.5vh;
+        border: 3px solid rgb(130, 73, 250);
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+  <div class="center">
+    <div id="navbar">
+      <img id="icon" onclick="openFullscreen()" src="https://images.squarespace-cdn.com/content/v1/61f231ab03e011211be9b7f7/97bd4a64-f9da-46f1-92d6-dd01b2c9f9f3/Copy+of+CE+Logo+%28Banner+%28Landscape%29%29+%28Facebook+Post%29+%28Banner+%28Landscape%29%29.png?format=1500w">
+      <div id="questions"></div>
+      <div id="menu" onclick="alert('Answers save automatically on this browser and computer in localStorage after you make changes')">
+        <i class="fa fa-save"></i>
+      </div>
+    </div>
+    <form>
+      <!-- ========================= QUESTIONS GO BELOW HERE ====================================== -->
+      
+      <div class="question">
+        <h1>
+          INSTRUCTIONS
+        </h1>
+        <p>
+          This assessment is best taken on a computer using the latest Chrome browser.
+        </p>
+        <p>
+          Click the cascade icon to view in full-screen mode. 
+          Click the question links at the top to go to a specific question.
+        </p>
+        <p>
+          This assessment is not timed. Your progress is saved on this browser (on this device) when the save icon <i class="fa fa-save"></i> at the top is green.
+        </p>
+        <p>
+          You'll get your results emailed after you hit 'submit' on the last question. Please enter the email you bought this assessment with so we can send your results once the short answer questions are graded: 
+        </p>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" name="name" id="name" required />
+          <label for="name" class="form__label">Student Name*</label>
+        </div>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Email" name="email" id="email" required />
+          <label for="email" class="form__label">Parent Email*</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          Select all of the options that work to find the total number of flowers.
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/image5.png?v=1665026148152">
+        <div class="inputGroup">
+          <input id="1" name="q1" type="checkbox"/>
+          <label for="1">3+3+3+3+3</label>
+        </div>
+        <div class="inputGroup">
+          <input id="2" name="q1" type="checkbox"/>
+          <label for="2">5 x 3</label>
+        </div>
+        <div class="inputGroup">
+          <input id="3" name="q1" type="checkbox"/>
+          <label for="3">5+5+5+5+5</label>
+        </div>
+        <div class="inputGroup">
+          <input id="4" name="q1" type="checkbox"/>
+          <label for="4">3 x 5</label>
+        </div> 
+      </div>
+      
+      <div class="question">
+        <p>
+          There are 12 friends trying to take a road trip. If they split up evenly in the cars, how many people will sit in each car?
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/image14.png?v=1665187372001">
+        <div class="inputGroup">
+          <input id="5" name="q2" type="radio"/>
+          <label for="5">12 people x 3 cars</label>
+        </div>
+        <div class="inputGroup">
+          <input id="6" name="q2" type="radio"/>
+          <label for="6">12 people x 4 cars</label>
+        </div>
+        <div class="inputGroup">
+          <input id="7" name="q2" type="radio"/>
+          <label for="7">12 people ÷ 3 cars</label>
+        </div>
+        <div class="inputGroup">
+          <input id="8" name="q2" type="radio"/>
+          <label for="8">12 people ÷ 4 cars</label>
+        </div> 
+      </div>
+      
+      <div class="question">
+        <p>
+          An octopus has 8 legs. Find the number of octopus legs depending on how many octopuses are at an aquarium.
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/image11.png?v=1665195947499">
+        <br>
+        <div class="form__short blank">
+          4 octopuses = <input class="form__blank" id="10" name="q3" type="input"/>total legs
+        </div>
+        <div class="form__short blank">
+          6 octopuses = <input class="form__blank" id="11" name="q4" type="input"/>total legs
+        </div>
+        <div class="form__short blank">
+          9 octopuses = <input class="form__blank" id="12" name="q5" type="input"/>total legs
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+           Find the missing values:          
+        </p>
+        <div style="width: 100%;">
+          <div class="form__short blank">
+            <input class="form__blank" id="13" name="q6" type="input"/>x 6 = 42
+          </div>
+          <div class="form__short blank;">
+            24 &divide; 8 =<input class="form__blank" id="14" name="q7" type="input"/>
+          </div> 
+          <div class="form__short blank;">
+            81 &divide; 9 =<input class="form__blank" id="15" name="q8" type="input"/>
+          </div> 
+          <div class="form__short blank;">
+            7 x<input class="form__blank" id="16" name="q9" type="input"/>= 56
+          </div>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          When you add together (5 + 6) + 4 does it equal 5 + (6 + 4)?
+        </p>
+        <div class="inputGroup">
+          <input id="17" name="q10" type="radio"/>
+          <label for="17">Yes</label>
+        </div>
+        <div class="inputGroup">
+          <input id="18" name="q10" type="radio"/>
+          <label for="18">No</label>
+        </div> 
+      </div>
+      
+<!--       Section 2 -->
+      <div class="question">
+        <p>
+          How many boxes of donuts need to be purchased? Each person will eat one donut.
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Donuts.png?v=1665349577013">
+        <br>
+        <div class="form__short blank;">
+          36 people =<input class="form__blank" id="19" name="q11" type="input"/>boxes of donuts
+        </div> 
+        <div class="form__short blank;">
+          54 people =<input class="form__blank" id="20" name="q12" type="input"/>boxes of donuts
+        </div> 
+        <div class="form__short blank;">
+          60 people =<input class="form__blank" id="21" name="q13" type="input"/>boxes of donuts
+        </div> 
+      </div>
+      
+      <div class="question">
+        <p>
+          You have 54 Legos. Your friend has twice as many Legos. How many Legos do you have all together?
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Legos.png?v=1665424060648">
+        <div class="inputGroup">
+          <input id="22" name="q14" type="radio"/>
+          <label for="22">27</label>
+        </div>
+        <div class="inputGroup">
+          <input id="23" name="q14" type="radio"/>
+          <label for="23">81</label>
+        </div>
+        <div class="inputGroup">
+          <input id="24" name="q14" type="radio"/>
+          <label for="24">108</label>
+        </div>
+        <div class="inputGroup">
+          <input id="25" name="q14" type="radio"/>
+          <label for="25">162</label>
+        </div> 
+      </div>
+
+      <div class="question">
+        <p>
+          Each library shelf holds 50 books. There are 9 shelves in the history section of the library. How many history books can fit there? 
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Books.png?v=1665424333918">
+        <div class="inputGroup">
+          <input id="26" name="q15" type="radio"/>
+          <label for="26">50</label>
+        </div>
+        <div class="inputGroup">
+          <input id="27" name="q15" type="radio"/>
+          <label for="27">450</label>
+        </div>
+        <div class="inputGroup">
+          <input id="28" name="q15" type="radio"/>
+          <label for="28">540</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          If you drink 8 cups of water each day, how much water will you drink during a 30 day month?         
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Water.png?v=1665424470641">
+        <div class="inputGroup">
+          <input id="29" name="q16" type="radio"/>
+          <label for="29">8</label>
+        </div>
+        <div class="inputGroup">
+          <input id="30" name="q16" type="radio"/>
+          <label for="30">30</label>
+        </div>
+        <div class="inputGroup">
+          <input id="31" name="q16" type="radio"/>
+          <label for="31">240</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          A bake fair sold 322 cookies and 149 cupcakes. How many total desserts were sold?        
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Cookies.png?v=1665424622641">
+        <div class="inputGroup">
+          <input id="32" name="q17" type="radio"/>
+        </div>
+        <div class="inputGroup">
+          <input id="33" name="q17" type="radio"/>
+          <label for="33">322 x 149</label>
+        </div>
+        <div class="inputGroup">
+          <input id="34" name="q17" type="radio"/>
+          <label for="34">322 &divide; 149</label>
+        </div>
+        <div class="inputGroup">
+          <input id="35" name="q17" type="radio"/>
+          <label for="35">322 + 149</label>
+        </div>
+      </div>
+      
+      <!--       Section 3 -->
+      
+      <div class="question">
+        <p>
+          Compare the following fractions. Click on the &gt;, =, or &lt; to place in the circle.    
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Fractions1.png?v=1665426572168">
+        <br>
+        <div class="horizontal-mcq">
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);"/>
+            <input id="36" name="q18" type="radio"/>
+            <label for="36" style="opacity: 0; position: absolute; height: 0">greater than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086">
+            <input id="37" name="q18" type="radio"/>
+            <label for="37" style="opacity: 0; position: absolute; height: 0">less than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/equal%20to.png?v=1665427018002">
+            <input id="38" name="q18" type="radio"/>
+            <label for="38" style="opacity: 0; position: absolute; height: 0">equal to</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          Compare the following fractions. Click on the &gt;, =, or &lt; to place in the circle.    
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Fractions2.png?v=1665697481442">
+        <br>
+        <div class="horizontal-mcq">
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);"/>
+            <input id="39" name="q19" type="radio"/>
+            <label for="39" style="opacity: 0; position: absolute; height: 0">greater than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086">
+            <input id="40" name="q19" type="radio"/>
+            <label for="40" style="opacity: 0; position: absolute; height: 0">less than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/equal%20to.png?v=1665427018002">
+            <input id="41" name="q19" type="radio"/>
+            <label for="41" style="opacity: 0; position: absolute; height: 0">equal to</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>
+          Compare the following fractions. Click on the &gt;, =, or &lt; to place in the circle.    
+        </p>
+        <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/Fractions3.png?v=1665697492115">
+        <br>
+        <div class="horizontal-mcq">
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);"/>
+            <input id="42" name="q20" type="radio"/>
+            <label for="42" style="opacity: 0; position: absolute; height: 0">greater than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/less%20than.png?v=1665427019086">
+            <input id="43" name="q20" type="radio"/>
+            <label for="43" style="opacity: 0; position: absolute; height: 0">less than</label>
+          </div>
+          <div class="horizontal-option">
+            <img src="https://cdn.glitch.global/cf99be86-c4b7-4aa0-be9d-47eed8284833/equal%20to.png?v=1665427018002">
+            <input id="44" name="q20" type="radio"/>
+            <label for="44" style="opacity: 0; position: absolute; height: 0">equal to</label>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ========================= QUESTIONS GO ABOVE HERE ====================================== -->
+    </form>
+    <button id="submit" class="nav" onclick="submit()">SUBMIT</button>
+    <button id="next" class="nav" onclick="next()">NEXT</button>
+    <button id="back" class="nav" onclick="back()">BACK</button>
+  </div>
+
+  <script>
+    // navigation
+    let i = 0;
+    let ix = 0;
+    let answeredQuestions = [];
+    [...document.getElementsByClassName('question')].forEach((elem) => { 
+      let questionlink = document.createElement('div');
+      questionlink.innerHTML = `<div>${(i == 0) ? '<i class="fa fa-info"></i>' : i}</div>`;
+      questionlink.id = 'qlink-' + i;
+      let save = i;
+      questionlink.onclick = () => {
+        ix = save;
+        setCurrentScreen(ix);
+      };
+      document.getElementById('questions').appendChild(questionlink);  
+      i++;
+    });
+    
+    function setCurrentScreen(i) {
+      [...document.getElementsByClassName('question')].forEach((elem) => { 
+        elem.style.display = "none";
+      });
+      ix = i;
+      [...document.getElementsByClassName('question')][ix].style.display = "block";
+      if (ix == 0) {
+        document.getElementById('back').style.display = "none";
+        document.getElementById('submit').style.display = "none"; // submit button
+      }
+      else document.getElementById('back').style.display = "block";
+      if (ix == [...document.getElementsByClassName('question')].length - 1) { 
+        document.getElementById('next').style.display = "none"; 
+        document.getElementById('submit').style.display = "block"; // submit button
+      }
+      else document.getElementById('next').style.display = "block";
+      changeColor();
+    }
+    setCurrentScreen(0);
+    
+    function changeColor() {
+      [...document.getElementById('questions').children].forEach((elem) => {
+              elem.style.backgroundColor = 'hsla(188.019801980198, 94.39252336448597%, 41.96078431372549%, 0.5)';                                                       
+      });
+      answeredQuestions.forEach((index, i, object) => {
+        if (isAnswered([...document.getElementsByClassName('question')][index])) {
+          document.getElementById('qlink-' + index).style.backgroundColor = 'hsla(188.019801980198, 94.39252336448597%, 41.96078431372549%, 1)';
+        } else {
+          object.splice(i, 1);
+        }
+      });
+      document.getElementById('qlink-' + ix).style.backgroundColor = 'rgb(234, 109, 48)';
+    }
+    
+    function answered() {
+      answeredQuestions.push(ix);
+    }
+    
+    function next() {
+      if (ix + 1 >= [...document.getElementsByClassName('question')].length) return;
+      [...document.getElementsByClassName('question')][ix].style.display = "none";
+      ix++;
+      [...document.getElementsByClassName('question')][ix].style.display = "block";
+      if (ix == [...document.getElementsByClassName('question')].length - 1) {
+        document.getElementById('next').style.display = "none";
+        document.getElementById('submit').style.display = "block"; // submit button
+      }
+      document.getElementById('back').style.display = "block";
+      changeColor();
+    }
+    
+    function back() {
+      if (ix - 1 < 0) return;
+      [...document.getElementsByClassName('question')][ix].style.display = "none";
+      ix--;
+      [...document.getElementsByClassName('question')][ix].style.display = "block";
+      if (ix == 0) document.getElementById('back').style.display = "none";
+      document.getElementById('next').style.display = "block";
+      changeColor();
+    }
+    
+    document.onkeydown = checkKey;
+    function checkKey(e) {
+        e = e || window.event;
+        if (e.keyCode == '37') {
+           // left arrow
+          back();
+        }
+        else if (e.keyCode == '39') {
+           // right arrow
+          next();
+        }
+
+    }
+    
+    // submission    
+    function submit() {
+      // make sure all questions are answered
+      let existsUnanswered = false;
+      [...document.getElementsByClassName('question')].every(q => {
+        if (!isAnswered(q)) {
+          alert("Not all questions are answered");
+          existsUnanswered = true;
+          return false;
+        }
+      });
+      if (existsUnanswered) return;
+      
+      let url = getUrl()
+      console.log(url)
+      try {
+        submitGoogleForm(url); 
+        localStorage.clear(); // unsave inputs after submit
+        alert("Congrats! Your answers have been submitted 🎉");
+      } catch {
+        alert("Submission Failed. Please email us the following url so we can try to recover your data: " + url);
+      }
+    }
+    
+    function submitGoogleForm(url) {
+        let iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.style.height = "0px";
+        iframe.style.border = "none";
+        document.body.appendChild(iframe);
+        iframe.onload = () => { document.body.removeChild(iframe) };
+    }
+    
+    function getTextAnswer(name) {
+      return encodeURIComponent(document.querySelector('input[name="'+name+'"]').value);
+    }
+    
+    function getMCQAnswer(name) {
+      return encodeURIComponent(document.querySelector('input[name="'+name+'"]:checked').label.innerHTML).replaceAll('%20','+');
+    }
+    
+    function getMSelectAnswers(name) {
+      return [...document.querySelectorAll('input[name="'+name+'"]:checked')].map((elem) => { return encodeURIComponent(elem.label.innerHTML).replaceAll('%20','+'); });
+    }
+    
+    function fillMSelect(answers, entrystr="&entry.319286844=") {
+      let answerstr = "";
+      for (let i = 0; i < answers.length; i++) {
+        answerstr += entrystr + answers[i].replaceAll(' ', '+');
+      }
+      return answerstr;
+    }
+    
+    var labels = document.getElementsByTagName('LABEL');
+    for (var labeli = 0; labeli < labels.length; labeli++) {
+        if (labels[labeli].htmlFor != '') {
+             var elem = document.getElementById(labels[labeli].htmlFor);
+             if (elem)
+                elem.label = labels[labeli];         
+        }
+    }
+
+    function getUrl() {
+      let name = getTextAnswer('name');
+      let email = getTextAnswer('email');
+      let q1 = getMSelectAnswers('q1');
+      let q2 = getMCQAnswer('q2');
+      let q3 = getTextAnswer('q3');
+      let q4 = getTextAnswer('q4');
+      let q5 = getTextAnswer('q5');
+      let q6 = getTextAnswer('q6');
+      let q7 = getTextAnswer('q7');
+      let q8 = getTextAnswer('q8');
+      let q9 = getTextAnswer('q9');
+      let q10 = getMCQAnswer('q10');
+      let q11 = getTextAnswer('q11');
+      let q12 = getTextAnswer('q12');
+      let q13 = getTextAnswer('q13');
+      let q14 = getMCQAnswer('q14');
+      let q15 = getMCQAnswer('q15');
+      let q16 = getMCQAnswer('q16');
+      let q17 = getMCQAnswer('q17');
+      let q18 = getMCQAnswer('q18');
+      let q19 = getMCQAnswer('q19');
+      let q20 = getMCQAnswer('q20');
+    
+      return fillURL(name, email, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20);
+    }
+    
+    function fillURL(name, email, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20) {
+      let url = "https://docs.google.com/forms/d/e/1FAIpQLScCNKEHK5kRy5XIsOMuBZR6xGjp7Df8UPmNawVAY2CiUtd_9Q/formResponse?usp=pp_url";
+      url += "&entry.1254300239=" + name;
+      url += "&entry.1772323399=" + email;
+      url += fillMSelect(q1, "&entry.493116941=");
+      url += "&entry.663580541=" + q2;
+      url += "&entry.1028211906=" + q3;
+      url += "&entry.359263322=" + q4;
+      url += "&entry.1298044183=" + q5;
+      url += "&entry.1578105425=" + q6;
+      url += "&entry.388955435=" + q7;
+      url += "&entry.490580984=" + q8;
+      url += "&entry.2062928622=" + q9;
+      url += "&entry.50517471=" + q10;
+      url += "&entry.1374976191=" + q11;
+      url += "&entry.1012930423=" + q12;
+      url += "&entry.716175780=" + q13;
+      url += "&entry.700808764=" + q14;
+      url += "&entry.92840486=" + q15;
+      url += "&entry.649078728=" + q16;
+      url += "&entry.1855151669=" + q17;
+      url += "&entry.190643212=" + q18;
+      url += "&entry.588043978=" + q19;
+      url += "&entry.1793202618=" + q20;
+      return url + "&submit=Submit";
+    }
+    
+    // check if question is answered
+    function isAnswered(elem) {
+      let anyFilled = false;
+      elem.querySelectorAll("input").forEach(function(i) {
+        if(i.type === "radio" || i.type === "checkbox") {
+          let radioValueCheck = false;				          
+          elem.querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+            if(r.checked) radioValueCheck = true;
+          });
+          anyFilled ||= radioValueCheck;
+        } else {
+          if(i.value) anyFilled ||= true;
+        }
+      });
+      return anyFilled;
+    }
+    
+    // fullscreen
+    function openFullscreen() {
+      let elem = document.body;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+    
+    // complicated localStorage code to save progress automatically
+    (function (mz,cms,parentKey,subKey) {
+      setTimeout(function() {
+        try {
+          // save input data
+          const storeAll = "textarea,input";
+          const formArray = mz.querySelectorAll(storeAll);
+          parentKey = window.location.href+"-";
+          formArray.forEach((formItem) => {
+            if (formItem) {
+              subKey = formItem.getAttribute("id");
+              var key = parentKey+subKey;
+              if (localStorage[key]) {
+                  var _localStorage = localStorage[key];
+                  if (formItem.type == 'checkbox' || formItem.type == 'radio')
+                    formItem.checked = _localStorage == 'true';
+                  else
+                    formItem.value = _localStorage;
+              }
+              formItem.addEventListener("input", function () {
+                  answered();
+                  document.getElementsByClassName('fa-save')[0].style.color = 'green';
+                  var _localStorage = (formItem.type == 'checkbox' || formItem.type == 'radio') ? formItem.checked : formItem.value;
+                  var T = formItem.getAttribute("type");
+                  if (T == "password" || T == "hidden" || T == "submit" || formItem.disabled) {
+                      return;
+                  }
+                  localStorage.setItem(key, _localStorage);
+              } , false);
+              formItem;
+            }
+          }); 
+          
+          // save list of answered questions
+          if (localStorage[parentKey + 'answers']) {
+            answeredQuestions = JSON.parse(localStorage[parentKey + 'answers']);
+            changeColor();
+          }
+          if (localStorage[parentKey + 'ix']) setCurrentScreen(parseInt(localStorage[parentKey + 'ix'])); // save ix
+          window.addEventListener('click', () => { 
+            localStorage.setItem(parentKey + 'answers', JSON.stringify(answeredQuestions));
+            localStorage.setItem(parentKey + 'ix', ix); // save current question
+            document.getElementsByClassName('fa-save')[0].style.color = 'green';
+          });
+          window.addEventListener('keydown', () => { 
+            localStorage.setItem(parentKey + 'answers', JSON.stringify(answeredQuestions));
+            localStorage.setItem(parentKey + 'ix', ix); // save current question
+            document.getElementsByClassName('fa-save')[0].style.color = 'green';
+          });
+        } catch (error) {
+          console.error(error);
+          document.getElementsByClassName('fa-save')[0].style.color = 'red';
+        }
+      }, 1);
+    }(this.document,'','',''));
+    
+    function resize() {
+      document.getElementsByClassName('center')[0].style.maxWidth = Math.min(document.body.clientHeight - 30, 1000) + "px";      
+    }
+    window.onresize = resize;
+    resize()
+  </script>
+</body>
+</html>
