@@ -1,8 +1,9 @@
 <!--  
-Edit form: https://docs.google.com/forms/d/e/1FAIpQLSedk11G04TJ2Bs4mUM2MccDikEsV6Aa1ZEk3GRSNNBJQ3UKbA/viewform?usp=sharing
-View form: https://docs.google.com/forms/d/e/1FAIpQLSedk11G04TJ2Bs4mUM2MccDikEsV6Aa1ZEk3GRSNNBJQ3UKbA/viewform?usp=sf_link
+Edit form: https://docs.google.com/forms/d/e/1FAIpQLScCNKEHK5kRy5XIsOMuBZR6xGjp7Df8UPmNawVAY2CiUtd_9Q/viewform?usp=sharing
+View form: https://docs.google.com/forms/d/e/1FAIpQLScCNKEHK5kRy5XIsOMuBZR6xGjp7Df8UPmNawVAY2CiUtd_9Q/viewform?usp=sf_link
 
 Goals: keep everything copy-pastable and optimally in one file
+
 -->
 
 <!DOCTYPE html>
@@ -14,6 +15,12 @@ Goals: keep everything copy-pastable and optimally in one file
     <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/61f231ab03e011211be9b7f7/6c8827c8-cece-4dab-88a0-9bdc8ebf3600/favicon.ico?format=100w">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Cascade Assessment</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     <style>
       @font-face{font-family:minerva-modern;src:url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/3d9e8b/000000000000000077359a48/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/d03e48/000000000000000077359df2/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/32d3ee/0000000000000000000132e0/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/b59a99/000000000000000077359df3/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/383ab4/0000000000000000000132e4/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
       
@@ -146,7 +153,7 @@ Goals: keep everything copy-pastable and optimally in one file
       
       .question > img {
         width: auto;
-        max-height: 20vh;
+        max-height: 25vh;
       }
       
       .inputGroup > * {
@@ -407,7 +414,7 @@ Goals: keep everything copy-pastable and optimally in one file
       
       <div class="question">
         <h1>
-          INSTRUCTIONS
+          3RD GRADE MATH ASSESSMENT INSTRUCTIONS
         </h1>
         <p>
           This assessment is best taken on a computer using the latest Chrome browser.
@@ -430,8 +437,47 @@ Goals: keep everything copy-pastable and optimally in one file
           <input type="input" class="form__field" placeholder="Email" name="email" id="email" required />
           <label for="email" class="form__label">Parent Email*</label>
         </div>
+         <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Parent Name" name="parent name" id="parent name" required />
+          <label for="parent name" class="form__label">Parent Name*</label>
+        </div>
       </div>
       
+      <div class="question">
+        <p>
+          Current Grade Level
+        </p>
+        <div class="inputGroup">
+          <input id="-1" name="grade" type="radio"/>
+          <label for="-1">Preschool</label>
+        </div>
+        <div class="inputGroup">
+          <input id="-2" name="grade" type="radio"/>
+          <label for="-2">Kindergarten</label>
+        </div>
+        <div class="inputGroup">
+          <input id="-3" name="grade" type="radio"/>
+          <label for="-3">1st Grade</label>
+        </div>
+        <div class="inputGroup">
+          <input id="-4" name="grade" type="radio"/>
+          <label for="-4">2nd Grade</label>
+        </div> 
+         <div class="inputGroup">
+          <input id="-5" name="grade" type="radio"/>
+          <label for="-5">3rd Grade</label>
+        </div> 
+         <div class="inputGroup">
+          <input id="-6" name="grade" type="radio"/>
+          <label for="-6">4th Grade</label>
+        </div> 
+        <div class="inputGroup">
+          <input id="-7" name="grade" type="radio"/>
+          <label for="-7">5th Grade</label>
+        </div>
+      </div>
+      
+
       <div class="question">
         <p>
           Select all of the options that work to find the total number of flowers.
@@ -707,8 +753,246 @@ Goals: keep everything copy-pastable and optimally in one file
         </div>
       </div>
       
+ 	    <div class="question">
+        <p>
+          How long were you at the park?           
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/Time.png?v=1688351285513">
+        <div class="inputGroup">
+          <input id="45" name="q21" type="radio"/>
+          <label for="45">3:05 P.M.</label>
+        </div>
+        <div class="inputGroup">
+          <input id="46" name="q21" type="radio"/>
+          <label for="46">4:00 P.M.</label>
+        </div>
+        <div class="inputGroup">
+          <input id="47" name="q21" type="radio"/>
+          <label for="47">35 minutes</label>
+        </div>
+       <div class="inputGroup">
+          <input id="147" name="q21" type="radio"/>
+          <label for="147">1 hour 35 minutes</label>
+        </div>
+      </div>          
+      
+      
+   	<div class="question">
+        <p>
+          It takes 17 minutes to walk from your home to your art class. What time do you need to leave your house if you want to make it to the art class at the time it starts?           
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1MZ16EOHhM_C2dGV-yCI-_SuF28rzKBos%3Ds2048.png?v=1689282830810">
+        <div class="inputGroup">
+          <input id="48" name="q22" type="radio"/>
+          <label for="48">3:53 P.M.</label>
+        </div>
+        <div class="inputGroup">
+          <input id="49" name="q22" type="radio"/>
+          <label for="49">5:03 P.M.</label>
+        </div>
+        <div class="inputGroup">
+          <input id="50" name="q22" type="radio"/>
+          <label for="50">35 minutes</label>
+        </div>
+      </div>        
+      
+            
+      <div class="question">
+        <p>
+          Multiply
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1gjx30n39CSNgwFsBAUvn7eq5yteP6rDB%3Ds2048.png?v=1689283102757">
+        <br>
+        <div class="form__short blank">
+          <input class="form__blank" id="51" name="q23" type="input"/>
+        </div>
+      </div>
 
-      <!-- ========================= QUESTIONS GO ABOVE HERE ====================================== -->
+     <div class="question">
+        <p>
+          Multiply
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/14Sqr_2W1y8WPw-_KHW4D_5v2YvWdONpp%3Ds2048.png?v=1689283166679">
+        <br>
+        <div class="form__short blank">
+          <input class="form__blank" id="52" name="q24" type="input"/>
+        </div>
+      </div>
+      
+      
+        <div class="question">
+        <p>
+          Select all of the items that are close to 1 gram in weight.
+        </p>
+        <br>
+        <div class="horizontal-mcq">
+        <div class="horizontal-option">
+          <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1Ktz5OtVQd1u5gYzy0oPpCc2RjPelSuGq%3Ds2048.png?v=1689283229695" style="-webkit-transform: scaleX(1); transform: scaleX(1);"/>
+          <input id="53" name="q25" type="checkbox"/>
+          <label for="53" style="opacity: 0; position: absolute; height: 0">Item 1</label>
+        </div>
+        <div class="horizontal-option">
+          <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/16WsI-fzVBj4qoSUuuNxCm3nOf4imjy7g%3Ds2048.png?v=1689283235533" style="-webkit-transform: scaleX(1); transform: scaleX(1);"/>
+          <input id="54" name="q25" type="checkbox"/>
+            <label for="54" style="opacity: 0; position: absolute; height: 0">Item 2</label>
+        </div>
+        <div class="horizontal-option">
+          <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/123ynh8zQKX42mOov4aYaTl2wPqBWPVwD%3Ds2048.png?v=1689283239537" style="-webkit-transform: scaleX(1); transform: scaleX(1);"/>
+          <input id="55" name="q25" type="checkbox"/>
+            <label for="55" style="opacity: 0; position: absolute; height: 0">Item 3</label>
+        </div>
+        <div class="horizontal-option">
+          <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1WhHGdiaronbXXtC0cyfIbXI1t-QgArob%3Ds2048.png?v=1689283243502" style="-webkit-transform: scaleX(1); transform: scaleX(1);"/>
+          <input id="56" name="q25" type="checkbox"/>
+          <label for="56" style="opacity: 0; position: absolute; height: 0">Item 4</label>
+            
+        </div> 
+      </div>
+      </div>
+      
+                  
+      <div class="question">
+        <p>
+          Here is a recipe for baking cookies. This recipe makes 12 cookies but we need 24 cookies. How much flour will we need to use?
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1xn7oVBbpgX8ZMjIn7l3SEUWYMELaKDZT%3Ds2048.png?v=1689292830826">
+        <br>
+        <div class="form__short blank">
+          <input class="form__blank" id="57" name="q26" type="input"/>
+        </div>
+      </div>
+      
+    <div class="question">
+        <p>
+          How many centimeters is the butterfly’s wingspan?
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/Untitled%20(900%20%C3%97%20900%20px).png?v=1689297068340">
+        <br>
+        <div class="form__short blank">
+          <input class="form__blank" id="58" name="q27" type="input"/>
+        </div>
+      </div>
+      
+            
+   	<div class="question">
+        <p>
+          Students have the most of which pet?           
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1_dItDxWM050BFJGdq1RAtaCKmUqVJsu1%3Ds2048.png?v=1689294146023">
+        <div class="inputGroup">
+          <input id="59" name="q28" type="radio"/>
+          <label for="59">Cat</label>
+        </div>
+        <div class="inputGroup">
+          <input id="60" name="q28" type="radio"/>
+          <label for="60">Hamster</label>
+        </div>
+        <div class="inputGroup">
+          <input id="61" name="q28" type="radio"/>
+          <label for="61">Dog</label>
+        </div>
+       <div class="inputGroup">
+          <input id="62" name="q28" type="radio"/>
+          <label for="62">Fish</label>
+        </div>
+      </div>      
+      
+                  
+   	<div class="question">
+        <p>
+          How many more students have dogs than fish?           
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1_dItDxWM050BFJGdq1RAtaCKmUqVJsu1%3Ds2048.png?v=1689294146023">
+        <div class="inputGroup">
+          <input id="63" name="q29" type="radio"/>
+          <label for="63">15</label>
+        </div>
+        <div class="inputGroup">
+          <input id="64" name="q29" type="radio"/>
+          <label for="64">3</label>
+        </div>
+        <div class="inputGroup">
+          <input id="65" name="q29" type="radio"/>
+          <label for="65">12</label>
+        </div>
+      </div>    
+      
+      
+    	<div class="question">
+        <p>
+          What is the area of the shaded figure?           
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1Dur5MOTCgXZib15HfuBOLHkN3j6jb_Cx%3Ds2048.png?v=1689294199720">
+        <div class="inputGroup">
+          <input id="66" name="q30" type="radio"/>
+          <label for="66">36 square units</label>
+        </div>
+        <div class="inputGroup">
+          <input id="67" name="q30" type="radio"/>
+          <label for="67">24 square units</label>
+        </div>
+        <div class="inputGroup">
+          <input id="68" name="q30" type="radio"/>
+          <label for="68">30 square units</label>
+        </div>
+       <div class="inputGroup">
+          <input id="69" name="q30" type="radio"/>
+          <label for="69">32 square units</label>
+        </div>
+      </div>   
+      
+      
+         	<div class="question">
+        <p>
+          What is the area of the shaded figure?        
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/1Axt0TvftXbGdtXWCvUA6GvrVvBapS7UA%3Ds2048.png?v=1689294238535">
+        <div class="inputGroup">
+          <input id="70" name="q31" type="radio"/>
+          <label for="70">50 square feet</label>
+        </div>
+        <div class="inputGroup">
+          <input id="71" name="q31" type="radio"/>
+          <label for="71">62 square feet</label>
+        </div>
+        <div class="inputGroup">
+          <input id="72" name="q31" type="radio"/>
+          <label for="72">12 square feet</label>
+        </div>
+      </div> 
+      
+      
+     <div class="question">
+        <p>
+          Find area by adding or multiplying, check the boxes for the expressions that work to find the area:
+        </p>
+       <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/8%20cm%20(1).png?v=1689294278503">
+        <div class="inputGroup">
+          <input id="73" name="q32" type="checkbox"/>
+          <label for="73">(5x8)+(5x8)+(5x8)</label>
+        </div>
+        <div class="inputGroup">
+          <input id="74" name="q32" type="checkbox"/>
+          <label for="74">40 x 5</label>
+        </div>
+        <div class="inputGroup">
+          <input id="75" name="q32" type="checkbox"/>
+          <label for="75">40 x 3</label>
+        </div> 
+      </div>
+      
+    <div class="question">
+        <p>
+          Find the perimeter of the shape.
+        </p>
+        <img src="https://cdn.glitch.global/1767fbeb-0238-4cf0-9dbb-73c2ff18a53e/Perimeter%20(1).png?v=1689294346209">
+        <br>
+        <div class="form__short blank">
+          <input class="form__blank" id="76" name="q33" type="input"/>
+        </div>
+      </div>
+      
+      <!-- ========================= QUESTIONS GO ABOVE HERE ====================================== -->     
     </form>
     <button id="submit" class="nav" onclick="submit()">SUBMIT</button>
     <button id="next" class="nav" onclick="next()">NEXT</button>
@@ -820,25 +1104,26 @@ Goals: keep everything copy-pastable and optimally in one file
         }
       });
       if (existsUnanswered) return;
-      
+ 
       let url = getUrl()
       console.log(url)
       try {
-        submitGoogleForm(url); 
-        localStorage.clear(); // unsave inputs after submit
-        alert("Congrats! Your answers have been submitted 🎉");
+        submitGoogleForm(url, () => {
+          localStorage.clear(); // unsave inputs after submit
+          window.location.href = "https://cascadeenrichment.com/assessment-results" // insert URL to redirect to after successful submit here
+        }); 
       } catch {
         alert("Submission Failed. Please email us the following url so we can try to recover your data: " + url);
       }
     }
-    
-    function submitGoogleForm(url) {
+ 
+    function submitGoogleForm(url, onsubmit) {
         let iframe = document.createElement('iframe');
         iframe.src = url;
         iframe.style.height = "0px";
         iframe.style.border = "none";
         document.body.appendChild(iframe);
-        iframe.onload = () => { document.body.removeChild(iframe) };
+        iframe.onload = () => { document.body.removeChild(iframe); onsubmit() };
     }
     
     function getTextAnswer(name) {
@@ -870,9 +1155,12 @@ Goals: keep everything copy-pastable and optimally in one file
         }
     }
 
+    // EDIT THIS TO MATCH QUESTIONS
     function getUrl() {
       let name = getTextAnswer('name');
+      let parent_name = getTextAnswer ('parent name')
       let email = getTextAnswer('email');
+      let grade = getMCQAnswer('grade');
       let q1 = getMSelectAnswers('q1');
       let q2 = getMCQAnswer('q2');
       let q3 = getTextAnswer('q3');
@@ -893,16 +1181,28 @@ Goals: keep everything copy-pastable and optimally in one file
       let q18 = getMCQAnswer('q18');
       let q19 = getMCQAnswer('q19');
       let q20 = getMCQAnswer('q20');
-    
-      return fillURL(name, email, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20);
-    }
-    
-    function fillURL(name, email, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20) {
-      let url = "https://docs.google.com/forms/d/e/1FAIpQLScCNKEHK5kRy5XIsOMuBZR6xGjp7Df8UPmNawVAY2CiUtd_9Q/formResponse?usp=pp_url";
+      let q21 = getMCQAnswer('q21');
+      let q22 = getMCQAnswer('q22');
+      let q23 = getTextAnswer('q23');
+      let q24 = getTextAnswer('q24');
+      let q25 = getMSelectAnswers('q25');
+      let q26 = getTextAnswer('q26');
+      let q27 = getTextAnswer('q27');
+      let q28 = getMCQAnswer('q28');
+      let q29 = getMCQAnswer('q29');
+      let q30 = getMCQAnswer('q30');
+      let q31 = getMCQAnswer('q31');
+      let q32 = getMSelectAnswers('q32');
+      let q33 = getTextAnswer('q33');      
+      
+      
+      let url = "https://docs.google.com/forms/d/e/1FAIpQLScCNKEHK5kRy5XIsOMuBZR6xGjp7Df8UPmNawVAY2CiUtd_9Q/formResponse?usp=pp_url"
       url += "&entry.1254300239=" + name;
+      url += "&entry.1053692309=" + grade;
+      url += "&entry.1687222679=" + parent_name;
       url += "&entry.1772323399=" + email;
       url += fillMSelect(q1, "&entry.493116941=");
-      url += "&entry.663580541=" + q2;
+      url += "&entry.663580541="  + q2;
       url += "&entry.1028211906=" + q3;
       url += "&entry.359263322=" + q4;
       url += "&entry.1298044183=" + q5;
@@ -912,8 +1212,8 @@ Goals: keep everything copy-pastable and optimally in one file
       url += "&entry.2062928622=" + q9;
       url += "&entry.50517471=" + q10;
       url += "&entry.1374976191=" + q11;
-      url += "&entry.1012930423=" + q12;
-      url += "&entry.716175780=" + q13;
+      url += "&entry.1907831422=" + q12;
+      url += "&entry.1652392695=" + q13;
       url += "&entry.700808764=" + q14;
       url += "&entry.92840486=" + q15;
       url += "&entry.649078728=" + q16;
@@ -921,6 +1221,20 @@ Goals: keep everything copy-pastable and optimally in one file
       url += "&entry.190643212=" + q18;
       url += "&entry.588043978=" + q19;
       url += "&entry.1793202618=" + q20;
+      url += "&entry.651307462=" + q21;
+      url += "&entry.2000404375=" + q22;
+      url += "&entry.278331625=" + q23;
+      url += "&entry.1652210529=" + q24;
+      url += fillMSelect(q25, "&entry.1214783774=");
+      url += "&entry.837380724=" + q26;
+      url += "&entry.2006843344=" + q27;
+      url += "&entry.2143038011=" + q28;
+      url += "&entry.188330464=" + q29;
+      url += "&entry.1962542700=" + q30;
+      url += "&entry.1435965228=" + q31;
+      url += fillMSelect(q32,"&entry.1313921997=");
+      url += "&entry.979179612=" + q33;
+      
       return url + "&submit=Submit";
     }
     
